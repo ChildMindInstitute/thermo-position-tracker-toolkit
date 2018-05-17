@@ -120,7 +120,7 @@ window.onload = function(){
    		if(getSamplesFlag > 0){
           	collectData();
       	}
-    }, 500);
+    }, 300);
 
   }
 
@@ -434,41 +434,41 @@ function getNNScore(selectNN){
 
     if(selectNN == 1){
         var feedArray = new Array(26).fill(0);
-        	//object temp
-            feedArray[0] = (sensorDataArray[0] - 70) / (101 - 70);
-      //      feedArray[1] = sensorDataArray[1] / 101;  //for hand
-            feedArray[1] = (sensorDataArray[2] - 70) / (101 - 70);
-            feedArray[2] = (sensorDataArray[3] - 70) / (101 - 70);
-            feedArray[3] = (sensorDataArray[4] - 70) / (101 - 70);
-            feedArray[4] = (sensorDataArray[5] - 70) / (101 - 70);
-            feedArray[5] = (sensorDataArray[6] - 70) / (101 - 70);
-            feedArray[6] = (sensorDataArray[7] - 70) / (101 - 70);
-            feedArray[7] = (sensorDataArray[8] - 70) / (101 - 70);
-            feedArray[8] = (sensorDataArray[9] - 70) / (101 - 70);
-            feedArray[9] = (sensorDataArray[10] - 70) / (101 - 70);
-            feedArray[10] = (sensorDataArray[11] - 70) / (101 - 70);
-            feedArray[11] = (sensorDataArray[12] - 70) / (101 - 70);
-            feedArray[12] = (sensorDataArray[13] - 70) / (101 - 70);
-            feedArray[13] = (sensorDataArray[14] - 70) / (101 - 70);
-            feedArray[14] = (sensorDataArray[15] - 70) / (101 - 70);
-            feedArray[15] = (sensorDataArray[16] - 70) / (101 - 70);
-            feedArray[16] = (sensorDataArray[17] - 70) / (101 - 70);
-            feedArray[17] = (sensorDataArray[18] - 70) / (101 - 70);
-            feedArray[18] = (sensorDataArray[19] - 70) / (101 - 70);
-          //  feedArray[19] = (sensorDataArray[20] - 70) / (101 - 70);  //for hand
-            feedArray[19] = (sensorDataArray[21] - 70) / (101 - 70);
+        //object temp
+        feedArray[0] = (sensorDataArray[0] - 70) / (101 - 70);
+      //feedArray[1] = sensorDataArray[1] / 101;  //for hand
+        feedArray[1] = (sensorDataArray[2] - 70) / (101 - 70);
+        feedArray[2] = (sensorDataArray[3] - 70) / (101 - 70);
+        feedArray[3] = (sensorDataArray[4] - 70) / (101 - 70);
+        feedArray[4] = (sensorDataArray[5] - 70) / (101 - 70);
+        feedArray[5] = (sensorDataArray[6] - 70) / (101 - 70);
+        feedArray[6] = (sensorDataArray[7] - 70) / (101 - 70);
+        feedArray[7] = (sensorDataArray[8] - 70) / (101 - 70);
+        feedArray[8] = (sensorDataArray[9] - 70) / (101 - 70);
+        feedArray[9] = (sensorDataArray[10] - 70) / (101 - 70);
+        feedArray[10] = (sensorDataArray[11] - 70) / (101 - 70);
+        feedArray[11] = (sensorDataArray[12] - 70) / (101 - 70);
+        feedArray[12] = (sensorDataArray[13] - 70) / (101 - 70);
+        feedArray[13] = (sensorDataArray[14] - 70) / (101 - 70);
+        feedArray[14] = (sensorDataArray[15] - 70) / (101 - 70);
+        feedArray[15] = (sensorDataArray[16] - 70) / (101 - 70);
+        feedArray[16] = (sensorDataArray[17] - 70) / (101 - 70);
+        feedArray[17] = (sensorDataArray[18] - 70) / (101 - 70);
+        feedArray[18] = (sensorDataArray[19] - 70) / (101 - 70);
+      //  feedArray[19] = (sensorDataArray[20] - 70) / (101 - 70);  //for hand
+        feedArray[19] = (sensorDataArray[21] - 70) / (101 - 70);
 
-            //distance
-            feedArray[20] = sensorDataArray[22] / 1020;
-            feedArray[21] = sensorDataArray[23] / 1020;
-            feedArray[22] = sensorDataArray[24] / 1020;
+        //distance
+        feedArray[20] = sensorDataArray[22] / 1020;
+        feedArray[21] = sensorDataArray[23] / 1020;
+        feedArray[22] = sensorDataArray[24] / 1020;
 
-            //pitch & roll
-            feedArray[23] = sensorDataArray[25] / 360;
-            feedArray[24] = sensorDataArray[26] / 360;
+        //pitch & roll
+        feedArray[23] = sensorDataArray[25] / 360;
+        feedArray[24] = sensorDataArray[26] / 360;
 
-            //average ambient temp
-            feedArray[25] = (sensorDataArray[27] - 70) / (101 - 70);
+        //average ambient temp
+        feedArray[25] = (sensorDataArray[27] - 70) / (101 - 70);
 
          
         // use trained NN or loaded NN
@@ -482,41 +482,41 @@ function getNNScore(selectNN){
 
     } else if(selectNN == 2){
         var feedArray = new Array(26).fill(0);
-        	//object temp
-            feedArray[0] = (sensorDataArray[0] - 70) / (101 - 70);
-      //      feedArray[1] = sensorDataArray[1] / 101;  //for hand
-            feedArray[1] = (sensorDataArray[2] - 70) / (101 - 70);
-            feedArray[2] = (sensorDataArray[3] - 70) / (101 - 70);
-            feedArray[3] = (sensorDataArray[4] - 70) / (101 - 70);
-            feedArray[4] = (sensorDataArray[5] - 70) / (101 - 70);
-            feedArray[5] = (sensorDataArray[6] - 70) / (101 - 70);
-            feedArray[6] = (sensorDataArray[7] - 70) / (101 - 70);
-            feedArray[7] = (sensorDataArray[8] - 70) / (101 - 70);
-            feedArray[8] = (sensorDataArray[9] - 70) / (101 - 70);
-            feedArray[9] = (sensorDataArray[10] - 70) / (101 - 70);
-            feedArray[10] = (sensorDataArray[11] - 70) / (101 - 70);
-            feedArray[11] = (sensorDataArray[12] - 70) / (101 - 70);
-            feedArray[12] = (sensorDataArray[13] - 70) / (101 - 70);
-            feedArray[13] = (sensorDataArray[14] - 70) / (101 - 70);
-            feedArray[14] = (sensorDataArray[15] - 70) / (101 - 70);
-            feedArray[15] = (sensorDataArray[16] - 70) / (101 - 70);
-            feedArray[16] = (sensorDataArray[17] - 70) / (101 - 70);
-            feedArray[17] = (sensorDataArray[18] - 70) / (101 - 70);
-            feedArray[18] = (sensorDataArray[19] - 70) / (101 - 70);
-          //  feedArray[19] = (sensorDataArray[20] - 70) / (101 - 70);  //for hand
-            feedArray[19] = (sensorDataArray[21] - 70) / (101 - 70);
+        //object temp
+        feedArray[0] = (sensorDataArray[0] - 70) / (101 - 70);
+      //feedArray[1] = sensorDataArray[1] / 101;  //for hand
+        feedArray[1] = (sensorDataArray[2] - 70) / (101 - 70);
+        feedArray[2] = (sensorDataArray[3] - 70) / (101 - 70);
+        feedArray[3] = (sensorDataArray[4] - 70) / (101 - 70);
+        feedArray[4] = (sensorDataArray[5] - 70) / (101 - 70);
+        feedArray[5] = (sensorDataArray[6] - 70) / (101 - 70);
+        feedArray[6] = (sensorDataArray[7] - 70) / (101 - 70);
+        feedArray[7] = (sensorDataArray[8] - 70) / (101 - 70);
+        feedArray[8] = (sensorDataArray[9] - 70) / (101 - 70);
+        feedArray[9] = (sensorDataArray[10] - 70) / (101 - 70);
+        feedArray[10] = (sensorDataArray[11] - 70) / (101 - 70);
+        feedArray[11] = (sensorDataArray[12] - 70) / (101 - 70);
+        feedArray[12] = (sensorDataArray[13] - 70) / (101 - 70);
+        feedArray[13] = (sensorDataArray[14] - 70) / (101 - 70);
+        feedArray[14] = (sensorDataArray[15] - 70) / (101 - 70);
+        feedArray[15] = (sensorDataArray[16] - 70) / (101 - 70);
+        feedArray[16] = (sensorDataArray[17] - 70) / (101 - 70);
+        feedArray[17] = (sensorDataArray[18] - 70) / (101 - 70);
+        feedArray[18] = (sensorDataArray[19] - 70) / (101 - 70);
+      //  feedArray[19] = (sensorDataArray[20] - 70) / (101 - 70);  //for hand
+        feedArray[19] = (sensorDataArray[21] - 70) / (101 - 70);
 
-            //distance
-            feedArray[20] = sensorDataArray[22] / 1020;
-            feedArray[21] = sensorDataArray[23] / 1020;
-            feedArray[22] = sensorDataArray[24] / 1020;
+        //distance
+        feedArray[20] = sensorDataArray[22] / 1020;
+        feedArray[21] = sensorDataArray[23] / 1020;
+        feedArray[22] = sensorDataArray[24] / 1020;
 
-            //pitch & roll
-            feedArray[23] = sensorDataArray[25] / 360;
-            feedArray[24] = sensorDataArray[26] / 360;
+        //pitch & roll
+        feedArray[23] = sensorDataArray[25] / 360;
+        feedArray[24] = sensorDataArray[26] / 360;
 
-            //average ambient temp
-            feedArray[25] = (sensorDataArray[27] - 70) / (101 - 70);
+        //average ambient temp
+        feedArray[25] = (sensorDataArray[27] - 70) / (101 - 70);
 
         if(haveNNFlag2 && activeNNFlag2){ 
             scoreArray = neuralNet2.activate(feedArray);
@@ -639,110 +639,15 @@ function trainNN(selectNN){
     var processedDataSession = sensorDataSession;
     var trainingData = [];
 
-    /******************* PRE-PROCESSING DATA ************************/
-    /******************* PRE-PROCESSING DATA ************************/
-    var minMaxAreaSize = processedDataSession.length * 0.01; //sample edge size for average min or max over that area
 
-    console.log("SIZE OF UNPROCESSED SESSION DATA: " + processedDataSession.length);
-    console.log("SIZE OF EDGE TO BE TRIMMED FROM DATA: " + minMaxAreaSize);
-
-
-/*  SKIP TRIM
-
-
-    var dataMaximums = new Array(3).fill(0);
-    var dataMinimums = new Array(3).fill(0);
- //   var minX = findAreaMinimum(processedDataSession, minMaxAreaSize);
-
-    //sort session data to get maximums, minimums and trim from edges
-    //from https://stackoverflow.com/questions/2793847/sort-outer-array-based-on-values-in-inner-array-javascript
-    for(var index = 18; index < 21; index++){
-
-        console.log("INDEX OF GAMEPAD DATA x/3 CURRENTLY BEING SORTED: " + index);
-
-        //get array of max values
-        processedDataSession.sort((function(index){
-            return function(a, b){
-                return (a[index] === b[index] ? 0 : (a[index] < b[index] ? -1 : 1));
-            };
-        })(index)); //  is the index
-
-        //slice ends off session data to remove max and min edge cases
-        processedDataSession = processedDataSession.slice(minMaxAreaSize, processedDataSession.length - minMaxAreaSize);
-
-        //get rid of values that may have come from maxed out sensor range, things that are too close to 0 or 1
-        for(var f = 0; f < processedDataSession.length; f++){
-
-            //get rid of values that are too high
-            if(processedDataSession[processedDataSession.length-1][index] > 0.99){
-                processedDataSession = processedDataSession.slice(0, processedDataSession.length - 1);
-            }
-
-            //get rid of values that are too low
-            if(processedDataSession[0][index] < 0.01){
-                processedDataSession = processedDataSession.slice(1, processedDataSession.length);
-            }
-        }
-
-        //get max and min from ends of trimmed data, take a little more off incase sensors exceeded max range a bunch of times
-        dataMinimums[index - 18] = processedDataSession[0][index];
-        dataMaximums[index - 18] = processedDataSession[processedDataSession.length - 1][index];
-
-    }
-
-    //map data to new min and max to span full 0-1 NN normal range
-    for(var p = 0; p < processedDataSession.length; p++){
-
-        processedDataSession[p][18] = ( processedDataSession[p][18] - dataMinimums[0] ) * ( 1 / ( dataMaximums[0] - dataMinimums[0] ) );
-        processedDataSession[p][19] = ( processedDataSession[p][19] - dataMinimums[1] ) * ( 1 / ( dataMaximums[1] - dataMinimums[1] ) );
-        processedDataSession[p][20] = ( processedDataSession[p][20] - dataMinimums[2] ) * ( 1 / ( dataMaximums[2] - dataMinimums[2] ) );
-
-    }
-
-    console.log("MINIMUM VALUES: " + dataMinimums);
-    console.log("MAXIMUM VALUES: " + dataMaximums);
-    console.log("SIZE OF SORTED, TRIMMED AND MAPPED DATA: " + processedDataSession.length);
-    console.log("SORTED, TRIMMED AND MAPPED DATA: " + processedDataSession);
-
-    */
-
-
-    /******************* END PRE-PROCESSING DATA ********************/
-    /******************* END PRE-PROCESSING DATA ********************/
-
+    var countRealTraining = 0;
 
     for(var i=0; i<processedDataSession.length; i++){
 
         var currentSample = processedDataSession[i];
 
-
-// HERE IS WHERE WE SPLIT SPLAT SLICE DICE !!!!!!!!!!!!!!!!!!!!!!!!!
-// HERE IS WHERE WE SPLIT SPLAT SLICE DICE !!!!!!!!!!!!!!!!!!!!!!!!!
-// HERE IS WHERE WE SPLIT SPLAT SLICE DICE !!!!!!!!!!!!!!!!!!!!!!!!!
-        var outputArray = new Array(26).fill(0);     // 1-6 --> X   7-8 --> Y  9-10 --> Z
-
-        //!!!  JOYSTICK JIG DATA !!!
-     //   outputArray[0] = currentSample[18];
-     //   outputArray[1] = currentSample[19];
-     //   outputArray[2] = currentSample[20];
-   /*   collectedDataArray[28] = xJoystick.toFixed(4);
-      collectedDataArray[29] = yJoystick.toFixed(4);
-      collectedDataArray[30] = distanceSensor.toFixed(4); */
-
-        // X axis
-   /*     if(currentSample[18] < 0.33333){
-        	outputArray[0] = currentSample[18] * 3;
-        	outputArray[1] = 0;
-        	outputArray[2] = 0;
-        } else if(currentSample[18] >= 0.33333 && currentSample[18] < 0.66666){
-        	outputArray[0] = 1;
-        	outputArray[1] = (currentSample[18] - 0.33333) * 3;
-        	outputArray[2] = 0;
-        } else {
-        	outputArray[0] = 1;
-        	outputArray[1] = 1;
-        	outputArray[2] = (currentSample[18] - 0.66666) * 3;
-        } */
+// Spread joystick data across multiple output nodes
+        var outputArray = new Array(12).fill(0);     // 1-6 --> X   7-8 --> Y  9-10 --> Z
 
         // X axis
         if(currentSample[28] < 0.125){
@@ -844,93 +749,108 @@ function trainNN(selectNN){
 
             var inputArray = new Array(26).fill(0);
         	//object temp
-            inputArray[0] = (sensorDataArray[0] - 70) / (101 - 70);
+            inputArray[0] = (currentSample[0] - 70) / (101 - 70);
       //      inputArray[1] = sensorDataArray[1] / 101;  //for hand
-            inputArray[1] = (sensorDataArray[2] - 70) / (101 - 70);
-            inputArray[2] = (sensorDataArray[3] - 70) / (101 - 70);
-            inputArray[3] = (sensorDataArray[4] - 70) / (101 - 70);
-            inputArray[4] = (sensorDataArray[5] - 70) / (101 - 70);
-            inputArray[5] = (sensorDataArray[6] - 70) / (101 - 70);
-            inputArray[6] = (sensorDataArray[7] - 70) / (101 - 70);
-            inputArray[7] = (sensorDataArray[8] - 70) / (101 - 70);
-            inputArray[8] = (sensorDataArray[9] - 70) / (101 - 70);
-            inputArray[9] = (sensorDataArray[10] - 70) / (101 - 70);
-            inputArray[10] = (sensorDataArray[11] - 70) / (101 - 70);
-            inputArray[11] = (sensorDataArray[12] - 70) / (101 - 70);
-            inputArray[12] = (sensorDataArray[13] - 70) / (101 - 70);
-            inputArray[13] = (sensorDataArray[14] - 70) / (101 - 70);
-            inputArray[14] = (sensorDataArray[15] - 70) / (101 - 70);
-            inputArray[15] = (sensorDataArray[16] - 70) / (101 - 70);
-            inputArray[16] = (sensorDataArray[17] - 70) / (101 - 70);
-            inputArray[17] = (sensorDataArray[18] - 70) / (101 - 70);
-            inputArray[18] = (sensorDataArray[19] - 70) / (101 - 70);
+            inputArray[1] = (currentSample[2] - 70) / (101 - 70);
+            inputArray[2] = (currentSample[3] - 70) / (101 - 70);
+            inputArray[3] = (currentSample[4] - 70) / (101 - 70);
+            inputArray[4] = (currentSample[5] - 70) / (101 - 70);
+            inputArray[5] = (currentSample[6] - 70) / (101 - 70);
+            inputArray[6] = (currentSample[7] - 70) / (101 - 70);
+            inputArray[7] = (currentSample[8] - 70) / (101 - 70);
+            inputArray[8] = (currentSample[9] - 70) / (101 - 70);
+            inputArray[9] = (currentSample[10] - 70) / (101 - 70);
+            inputArray[10] = (currentSample[11] - 70) / (101 - 70);
+            inputArray[11] = (currentSample[12] - 70) / (101 - 70);
+            inputArray[12] = (currentSample[13] - 70) / (101 - 70);
+            inputArray[13] = (currentSample[14] - 70) / (101 - 70);
+            inputArray[14] = (currentSample[15] - 70) / (101 - 70);
+            inputArray[15] = (currentSample[16] - 70) / (101 - 70);
+            inputArray[16] = (currentSample[17] - 70) / (101 - 70);
+            inputArray[17] = (currentSample[18] - 70) / (101 - 70);
+            inputArray[18] = (currentSample[19] - 70) / (101 - 70);
           //  inputArray[19] = (sensorDataArray[20] - 70) / (101 - 70);  //for hand
-            inputArray[19] = (sensorDataArray[21] - 70) / (101 - 70);
+            inputArray[19] = (currentSample[21] - 70) / (101 - 70);
 
             //distance
-            inputArray[20] = sensorDataArray[22] / 1020;
-            inputArray[21] = sensorDataArray[23] / 1020;
-            inputArray[22] = sensorDataArray[24] / 1020;
+            inputArray[20] = (currentSample[22] / 1020);
+            inputArray[21] = (currentSample[23] / 1020);
+            inputArray[22] = (currentSample[24] / 1020);
 
             //pitch & roll
-            inputArray[23] = sensorDataArray[25] / 360;
-            inputArray[24] = sensorDataArray[26] / 360;
+            inputArray[23] = (currentSample[25] / 360);
+            inputArray[24] = (currentSample[26] / 360);
 
             //average ambient temp
-            inputArray[25] = (sensorDataArray[27] - 70) / (101 - 70);
+            inputArray[25] = ( (currentSample[27] - 70) / (101 - 70) );
 
         } else if(selectNN == 2){
 
             var inputArray = new Array(26).fill(0);
-        	//object temp
-            inputArray[0] = (sensorDataArray[0] - 70) / (101 - 70);
+          //object temp
+            inputArray[0] = (currentSample[0] - 70) / (101 - 70);
       //      inputArray[1] = sensorDataArray[1] / 101;  //for hand
-            inputArray[1] = (sensorDataArray[2] - 70) / (101 - 70);
-            inputArray[2] = (sensorDataArray[3] - 70) / (101 - 70);
-            inputArray[3] = (sensorDataArray[4] - 70) / (101 - 70);
-            inputArray[4] = (sensorDataArray[5] - 70) / (101 - 70);
-            inputArray[5] = (sensorDataArray[6] - 70) / (101 - 70);
-            inputArray[6] = (sensorDataArray[7] - 70) / (101 - 70);
-            inputArray[7] = (sensorDataArray[8] - 70) / (101 - 70);
-            inputArray[8] = (sensorDataArray[9] - 70) / (101 - 70);
-            inputArray[9] = (sensorDataArray[10] - 70) / (101 - 70);
-            inputArray[10] = (sensorDataArray[11] - 70) / (101 - 70);
-            inputArray[11] = (sensorDataArray[12] - 70) / (101 - 70);
-            inputArray[12] = (sensorDataArray[13] - 70) / (101 - 70);
-            inputArray[13] = (sensorDataArray[14] - 70) / (101 - 70);
-            inputArray[14] = (sensorDataArray[15] - 70) / (101 - 70);
-            inputArray[15] = (sensorDataArray[16] - 70) / (101 - 70);
-            inputArray[16] = (sensorDataArray[17] - 70) / (101 - 70);
-            inputArray[17] = (sensorDataArray[18] - 70) / (101 - 70);
-            inputArray[18] = (sensorDataArray[19] - 70) / (101 - 70);
+            inputArray[1] = (currentSample[2] - 70) / (101 - 70);
+            inputArray[2] = (currentSample[3] - 70) / (101 - 70);
+            inputArray[3] = (currentSample[4] - 70) / (101 - 70);
+            inputArray[4] = (currentSample[5] - 70) / (101 - 70);
+            inputArray[5] = (currentSample[6] - 70) / (101 - 70);
+            inputArray[6] = (currentSample[7] - 70) / (101 - 70);
+            inputArray[7] = (currentSample[8] - 70) / (101 - 70);
+            inputArray[8] = (currentSample[9] - 70) / (101 - 70);
+            inputArray[9] = (currentSample[10] - 70) / (101 - 70);
+            inputArray[10] = (currentSample[11] - 70) / (101 - 70);
+            inputArray[11] = (currentSample[12] - 70) / (101 - 70);
+            inputArray[12] = (currentSample[13] - 70) / (101 - 70);
+            inputArray[13] = (currentSample[14] - 70) / (101 - 70);
+            inputArray[14] = (currentSample[15] - 70) / (101 - 70);
+            inputArray[15] = (currentSample[16] - 70) / (101 - 70);
+            inputArray[16] = (currentSample[17] - 70) / (101 - 70);
+            inputArray[17] = (currentSample[18] - 70) / (101 - 70);
+            inputArray[18] = (currentSample[19] - 70) / (101 - 70);
           //  inputArray[19] = (sensorDataArray[20] - 70) / (101 - 70);  //for hand
-            inputArray[19] = (sensorDataArray[21] - 70) / (101 - 70);
+            inputArray[19] = (currentSample[21] - 70) / (101 - 70);
 
             //distance
-            inputArray[20] = sensorDataArray[22] / 1020;
-            inputArray[21] = sensorDataArray[23] / 1020;
-            inputArray[22] = sensorDataArray[24] / 1020;
+            inputArray[20] = (currentSample[22] / 1020);
+            inputArray[21] = (currentSample[23] / 1020);
+            inputArray[22] = (currentSample[24] / 1020);
 
             //pitch & roll
-            inputArray[23] = sensorDataArray[25] / 360;
-            inputArray[24] = sensorDataArray[26] / 360;
+            inputArray[23] = (currentSample[25] / 360);
+            inputArray[24] = (currentSample[26] / 360);
 
             //average ambient temp
-            inputArray[25] = (sensorDataArray[27] - 70) / (101 - 70);
+            inputArray[25] = ( (currentSample[27] - 70) / (101 - 70) );
         }
 
-  
-        trainingData.push({
-            input:  inputArray, 
-            output: outputArray
-        });
+        //is sample at maximum/minimum of joystick range
+        var notEdge = true;
+        if(outputArray[0] < 0.05 || outputArray[7] > 0.95 || outputArray[8] < 0.05 || outputArray[9] > 0.95){ notEdge = false; }
 
-        console.log(currentSample + " TRAINING INPUT: " + inputArray + "  --> NN# " + selectNN);
-        console.log(currentSample + " TRAINING OUTPUT: " + outputArray + "  --> NN# " + selectNN);
+        //randomly filter edge data
+        var randFilter = Math.random();
+
+        //filter 50% of joystick edge data
+        if(randFilter > 0.5 || notEdge){
+
+          trainingData.push({
+              input:  inputArray, 
+              output: outputArray
+          });
+
+          console.log(currentSample + " TRAIN INPUT: " + inputArray);
+          console.log(currentSample + " TRAIN OUTPUT: " + outputArray);
+
+        } else {
+          console.log("Trn Element " + i + "filtered - output: " + outputArray);
+        }
+
+
     }
 
     if(selectNN == 1){
-      console.log("TRAINING ON selectNN1");
+      console.log("TRAINING ON selectNN1 - data length: " + trainingData.length);
 
         trainer.train(trainingData, {
             rate: 0.05,
